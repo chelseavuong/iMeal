@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Free Meal Times
+{% endblock %}
+
+{% block main %}
+    <!-- Events Output -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Month</th>
+          <th scope="col">Day</th>
+          <th scope="col">Year</th>
+          <th scope="col">Time</th>
+          <th scope="col">AM/PM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        {% for content in events %}
+          <th>{{ content.month }}</th>
+          <td>{{ content.day }}</td>
+          <td>{{ content.year }}</td>
+          <td>{{ content.duration }}</td>
+          <td>{{ content.timezone }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+{% endblock %}

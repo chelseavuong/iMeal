@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Schedule
+{% endblock %}
+
+{% block main %}
+    <!-- Portfolio Output -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Month</th>
+          <th scope="col">Day</th>
+          <th scope="col">Year</th>
+          <th scope="col">Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        {% for content in portfolio %}
+          <th>{{ content.month }}</th>
+          <td>{{ content.day }}</td>
+          <td>{{ content.year }}</td>
+          <td>{{ content.duration }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+{% endblock %}
